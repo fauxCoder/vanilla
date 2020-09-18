@@ -1,0 +1,39 @@
+" disable vi compatibility
+set nocompatible
+
+" search folders recursively
+set path+=**
+set wildmenu
+
+"                V trailing space intentional
+nnoremap ,f :find 
+
+" stop having to press SHIFT
+nnoremap ; :
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set splitbelow
+set splitright
+
+set showcmd
+
+" Scrolling
+set scrolloff=5
+
+" locale?
+set encoding=utf8
+set fileencoding=utf-8
+
+" I never use ex mode
+nnoremap Q <Nop>
+
+if &diff
+    syntax off
+    highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+    highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+    highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+    highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+endif
